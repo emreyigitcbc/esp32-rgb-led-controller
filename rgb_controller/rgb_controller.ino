@@ -1,11 +1,6 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <EEPROM.h>
-
-
-#include <WiFi.h>
-#include <PubSubClient.h>
-#include <EEPROM.h>
 #include <ArduinoJson.h>
 
 // WiFi Credentials
@@ -13,9 +8,9 @@ const char* ssid = "ENTER_YOUR_WIFI_SSID";
 const char* password = "ENTER_YOUR_WIFI_PASS";
 
 // Public MQTT Broker Settings
-const char* mqtt_server = "MQTT_SERVER";
+const char* mqtt_server = "broker.hivemq.com";
 const int mqtt_port = 1883;
-const char* mqtt_topic = "TOPIC";
+const char* mqtt_topic = "yourname/topic/name";
 
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
